@@ -1,9 +1,6 @@
 package com.api.market.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigInteger;
 import java.util.List;
 
@@ -11,6 +8,8 @@ import java.util.List;
 @Table(name="clientes")
 public class Cliente {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String nombre;
     private String apellidos;

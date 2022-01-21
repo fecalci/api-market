@@ -21,12 +21,13 @@ public interface ProductMapper {
             @Mapping(source = "estado",target = "active"),
             @Mapping(source = "categoria",target = "category"),
     })
-    Producto toProducto(Product product);
 
-    List<Product> toProducts(List<Producto> products);
+    Product toProduct(Producto producto);
+
+    List<Product> toProducts(List<Producto> productos);
 
     @InheritInverseConfiguration
     @Mapping(target = "codigoBarras", ignore = true)
-    Product toProduct(Producto product);
+    Producto toProducto(Product product);
 
 }
